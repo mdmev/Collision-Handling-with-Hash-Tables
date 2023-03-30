@@ -3,15 +3,15 @@
 The current folder contains 2 main files, src/main.c and include/main.h, where Tarea3.c is the main file that contains all the executable functions of the program, while Tarea3.h contains the initialization of the functions that exist in Tarea3.c. The main functions that these files have are:
 
 // FUNCTIONS //
-unsigned long hash_function(unsigned long k); // Default hash function of the type h(k) = k mod m
-unsigned long hash_function_2(unsigned long k); // Hash2 function for double hashing of the type h(k) = 1 + (k mod(m-1))
-void free_item(hash_item* item); // Function that frees memory of an item
-void free_table(Hash_table* table); // Function that frees memory of the hash table
-unsigned long linear_prob(Hash_table* ht,unsigned long key, int i); // Function that resolves collisions through linear probing
-unsigned long quadratic_prob(Hash_table* ht, unsigned long key, int i); // Function that resolves collisions through quadratic probing
-unsigned long double_hashing(Hash_table* ht, unsigned long key, int i); // Function that resolves collisions through double hashing
-void ht_insert(Hash_table* table, unsigned long key, char* value,char* type); // Function that inserts a key and a value into the specified hash table, also receives a parameter that indicates the type of collision resolution to be used
-int contar(Hash_table* table); // Function that counts the number of empty items in a hash table
+  * unsigned long hash_function(unsigned long k); // Default hash function of the type h(k) = k mod m
+  * unsigned long hash_function_2(unsigned long k); // Hash2 function for double hashing of the type h(k) = 1 + (k mod(m-1))
+  * void free_item(hash_item* item); // Function that frees memory of an item
+  * void free_table(Hash_table* table); // Function that frees memory of the hash table
+  * unsigned long linear_prob(Hash_table* ht,unsigned long key, int i); // Function that resolves collisions through linear probing
+  * unsigned long quadratic_prob(Hash_table* ht, unsigned long key, int i); // Function that resolves collisions through quadratic probing
+  * unsigned long double_hashing(Hash_table* ht, unsigned long key, int i); // Function that resolves collisions through double hashing
+  * void ht_insert(Hash_table* table, unsigned long key, char* value,char* type); // Function that inserts a key and a value into the specified hash table, also receives   * a parameter that indicates the type of collision resolution to be used
+  * int contar(Hash_table* table); // Function that counts the number of empty items in a hash table
 
 Together, these functions execute a program that creates a hash table and manages its collisions through the open addressing strategy, which consists of 3 different functions: linear probing, quadratic probing, and double hashing, which handle these collisions in different ways. The program creates a hash table with a structure for the table of items, size, and for each item of the key-value type. This table has a size of 2000 elements and resolves collisions for different data that can be entered. To compile this program, you must write:
 ```bash
